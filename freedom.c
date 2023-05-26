@@ -1,8 +1,8 @@
 #include "main.h"
 /**
-* freedom - free the memory
+* freedom - FREE THE memoRY
 * @n: args
-* Return: null
+* Return: NULL
 */
 
 void freedom(int n, ...)
@@ -33,12 +33,12 @@ void freedom(int n, ...)
 }
 
 /**
-* free_all - frees tokenized PATH directories and user's arguments
-* @dptr1: first double pointer to free
-* @dptr2: second double pointer to free
-* @sptr1: first single pointer to free
-* @sptr2: second double pointer to free
-* Return: nothing
+* free_all - frees TOKENIZED PATH directories and USER'S ARGUMENTS
+* @dptr1: first double POINTER TO FREE
+* @dptr2: second double POINTER TO FREE
+* @sptr1: first single POINTER TO FREE
+* @sptr2: second double POINTER TO FREE
+* Return: NOTHING
 */
 
 void free_all(char **dptr1, char **dptr2, char *sptr1, char *sptr2)

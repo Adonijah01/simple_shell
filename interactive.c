@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * _interactive - Creates a loop that execute command lines entered by tty
- * @av: argument from main
- * Return: Exit / Error Code
+ * _interactive - Creates a LOOP that EXECUTE COMMAND lines entered BY TTY
+ * @av: ARGUMENT FROM MAIN
+ * Return: exit / error code
 */
 int _interactive(char **av __attribute__((unused)))
 {

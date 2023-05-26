@@ -1,7 +1,7 @@
 #include "main.h"
 /**
- * args_constructor - executes command lines entered by pipe
- * @buffer: command name
+ * args_constructor - Executes command lines entered by PIPE
+ * @buffer: command Name
  * Return: 0
 */
 char **args_constructor(char *buffer)

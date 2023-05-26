@@ -1,9 +1,9 @@
 #include "main.h"
 /**
-* free_env - frees tokenized PATH directories and user's arguments
-* @env_args: tokenized environment directories
-* @args: tokenized user's commands
-* Return: nothing
+* free_env - FREES TOKENIZED PATH directories and user's ARGUMENTS
+* @env_args: TOKENIZED environment DIRECTORIES
+* @args: TOKENIZED user's COMMANDS
+* Return: NOTHING
 */
 
 void free_env(char **env_args, char **args)

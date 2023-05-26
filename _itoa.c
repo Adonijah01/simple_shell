@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * lennum - length of number
+ * lennum - length number
  * @n: int
  * Return: length
  */
@@ -17,8 +17,8 @@ int lennum(int n)
 }
 
 /**
- * int_to_charac - convert to string
- * @num: integer to be printed
+ * int_to_charac - convert  string
+ * @num: integer  printed
  * Return: string
  */
 

@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- * main - Entry point of Shell
- * @ac: Argument counter
- * @av: Argument values
- * Return: Exit if success = 0
+ * main - ENTRY Point of SHELL
+ * @ac: Argument COUNTER
+ * @av: Argument VALUES
+ * Return: exit if SUCCESS = 0
 */
 
 int main(int ac __attribute__((unused)), char **av __attribute__((unused)))

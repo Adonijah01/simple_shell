@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * strncomparer - Compares two strings with n size
- * @s1: Given String 1
- * @s2: Given String 2
- * @n: Size to character compare
- * Return: 0 both strings are equals
+ * strncomparer - COMPARES TWO STRINGS WITH N SIZE
+ * @s1: given STRING 1
+ * @s2: given STRING 2
+ * @n: SIZE TO CHARACTER COMPARE
+ * Return: 0 BOTH STRINGS ARE EQUALS
 */
 int strncomparer(char *s1,  char *s2, size_t n)
 {
@@ -26,9 +26,9 @@ int strncomparer(char *s1,  char *s2, size_t n)
 }
 
 /**
- * strlarge - Funtion that returns length of a given string
- * @s: Given string
- * Return: number of elements
+ * strlarge - funtion that RETURNS LENGTH of A GIVEN STRING
+ * @s: given STRING
+ * Return: NUMBER OF ELEMENTS
 */
 int strlarge(char *s)
 {
@@ -40,9 +40,9 @@ int strlarge(char *s)
 }
 
 /**
- * strduplicate - Duplicates a given string
- * @s: given string
- * Return: Copy of given string
+ * strduplicate - duplicates a GIVEN STRING
+ * @s: GIVEN STRING
+ * Return: COPY OF GIVEN STRING
 */
 char *strduplicate(char *s)
 {
@@ -63,10 +63,10 @@ char *strduplicate(char *s)
 }
 
 /**
- * strcomparer - Compares two given  strings
- * @s1: Given S1 String
- * @s2: Given S2 String
- * Return: 0 if both are equals or ascii diff
+ * strcomparer - compares two given  STRINGS
+ * @s1: given S1 STRING
+ * @s2: given S2 STRING
+ * Return: 0 IF both are EQUALS or ASCII DIFF
 */
 int strcomparer(char *s1, char *s2)
 {
@@ -86,10 +86,10 @@ int strcomparer(char *s1, char *s2)
 }
 
 /**
- *strconk - concatenates two strings.
- *@dest: destiny string
- *@src: source string
- *Return: dest
+ *strconk - Concatenates TWO STRINGS.
+ *@dest: destiny STRING
+ *@src: source STRING
+ *Return: DEST
  */
 char *strconk(char *dest, char *src)
 {

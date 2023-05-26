@@ -15,9 +15,9 @@
 
 extern char **environ;
 /**
-* struct builtin - builtins
-* @b_name: name of the command
-* @b_func: pointer to a function
+* struct builtin - BUILTINS
+* @b_name: NAME OF THE COMMAND
+* @b_func: POINTER TO A FUNCTION
 */
 typedef struct builtin
 {

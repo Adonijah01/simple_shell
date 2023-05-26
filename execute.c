@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- * execo - Executes a given command
- * @command: Given command
- * @args: command arguments
- * Return: Exit = 0 or Error Number
+ * execo - Executes a GIVEN COMMAND
+ * @command: GIVEN COMMAND
+ * @args: COMMAND ARGUMENTS
+ * Return: Exit = 0 or error NUMBER
 */
 int execo(char *command, char **args)
 {

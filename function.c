@@ -1,10 +1,10 @@
 #include <stdio.h>
 
 /**
- * _compare - compares two strings at a given position
- * @x: string to be compared
- * @y: string to compare
- * Return: Nohing
+ * _compare - compares two STRINGS AT A GIVEN POSITION
+ * @x: STRING TO BE COMPARED
+ * @y: sTRING TO COMPARE
+ * Return: NOHING
 */
 int _compare(char *x, char *y)
 {
@@ -21,10 +21,10 @@ int _compare(char *x, char *y)
 }
 
 /**
- * _strstr - compares two strings at a given position
+ * _strstr - Compares two strings AT A GIVEN POSITION.
  * @x: string to be compared
- * @y: string to compare
- * Return: pointer to the first occurence
+ * @y: STRING TO COMPAR
+ * Return: POINTER TO THE FIRST OCCURENCE
 */
 char *_strstr(char *x, char *y)
 {
@@ -40,10 +40,10 @@ char *_strstr(char *x, char *y)
 
 
 /**
- * _strcpy - unction that copies the string pointed to by src
- *@dest: char
- *@src:_ char
- * Return: dest
+ * _strcpy - Unction that copies the STRING POINTED TO SRC
+ *@dest: CHAR
+ *@src:_ CHAR
+ * Return: DEST
  */
 char *_strcpy(char *dest, char *src)
 {

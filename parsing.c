@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * necklace_pearls - counts commands and options entered by user
- * @buffer: given command
- * Return: Number of arguments
+ * necklace_pearls - COUNTS COMMANDS and options ENTERED BY USER
+ * @buffer: GIVEN COMMAND
+ * Return: NUMBER Of ARGUMENTS
 */
 int necklace_pearls(char *buffer)
 {
@@ -27,10 +27,10 @@ int necklace_pearls(char *buffer)
 }
 
 /**
- * parsing - Function that splits a given string
- * @buffer: Given string
- * @characters: number of elements
- * Return: Tokenized string
+ * parsing - Function that SPLITS A GIVEN STRING
+ * @buffer: Given STRING
+ * @characters: Number of ELEMENTS
+ * Return: TOKENIZED String
 */
 
 char **parsing(char *buffer, int characters)

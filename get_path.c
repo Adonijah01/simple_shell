@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * ret_path_line - Finds the PATH variable from enviroment
- * Return: pointer position of the PATH variable
+ * ret_path_line - fINDS THE  PATH variable from ENVIRONMENT
+ * Return: POINTER POSITION  of the PATH VARIABLE
 */
 
-char *ret_path_line()
+cihar *ret_path_line()
 {
 	char *path = NULL;
 	int i = 0;
@@ -28,9 +28,9 @@ char *ret_path_line()
 }
 
 /**
- * change_equal_sig - Change from a given strings = to : character
- * @str: given string
- * Return: Nohing
+ * change_equal_sig - CHANGE from A GIVEN STRINGS = to : character
+ * @str: GIVEN STRING
+ * Return: NohinG
 */
 
 void change_equal_sig(char *str)
@@ -50,9 +50,9 @@ void change_equal_sig(char *str)
 
 /**
  * _insert_path - Inserts the directory into given command
- * @args: given command
- * @path: tokenized path enviroment
- * Return: Full path command if exists or just a given command
+ * @args: given commanD
+ * @path: TOKENIZED Path EnviromenT
+ * Return: full path command if EXISTS or JUST A given COMMAND
 */
 
 char *_insert_path(char **args, char **path)
@@ -100,8 +100,8 @@ char *_insert_path(char **args, char **path)
 }
 
 /**
- * getenvpath - Creates an array of pointers to the PATH directories
- * Return: Pointer to an array of tokenized directories
+ * getenvpath - CREATES AN array of pointers TO THE PATH DIRECTORIES
+ * Return: pointer to an ARRAY OF  tokenized DIRECTORIES
 */
 
 char **getenvpath()
@@ -111,7 +111,7 @@ char **getenvpath()
 	char **env_args;
 
 	tmp = ret_path_line();
-	change_equal_sig(tmp); /*Change  PATH= for PATH:*/
+	change_equal_sig(tmp); /*change  PATH= for PATH:*/
 	size_args = necklace_pearls(tmp);
 	env_args = parsing(tmp, size_args);
 	freedom(1, tmp);
@@ -120,9 +120,9 @@ char **getenvpath()
 }
 
 /**
- * spaces_buster - Creates an array of pointers to the PATH directories
- * @buffer: given string
- * Return: Pointer to an array of tokenized directories
+ * spaces_buster - creates an array of POINTERS TO the PATH DIRECTORIES
+ * @buffer: GIVEN STRING
+ * Return: Pointer to an ARRAY of tokenized DIRECTORIES
 */
 
 int spaces_buster(char *buffer)

@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * error_msg - writes error depending on the error number
- * @args: given command to execute
- * Return: Nothing
+ * error_msg - WRITES ERROR depending on THE ERROR NUMBER
+ * @args: Given COMMAND TO EXECUTE
+ * Return: nothing
 */
 void error_msg(char **args)
 {
@@ -22,10 +22,10 @@ void error_msg(char **args)
 }
 
 /**
- * error_badcommand - writes error depending on the error number
- * @args: given command to execute
- * @buffer: given command to execute
- * Return: Nothing
+ * error_badcommand - Writes error depending on the ERROR NUMBER
+ * @args: Given COMMAND TO EXECUTE
+ * @buffer: Given COMMAND TO EXECUTE
+ * Return: nothing
 */
 void error_badcommand(char **args, char *buffer)
 {

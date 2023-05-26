@@ -15,9 +15,9 @@
 
 extern char **environ;
 /**
- * The structure builtin is equivalent to builtins
- * @b_name refers to the name of the command.
- * @b_func is a pointer to a function.
+ * struct is equivalent to builtins
+ * @b_name - name of the command
+ * @b_func - pointer to function.
 */
 
 
@@ -83,4 +83,4 @@ char **args_constructor(char *buffer);
 void validagetline(char *buffer, int len, char **args, char **env_args);
 int notty(char **av __attribute__((unused)));
 #endif /*SIMPLE_SHELL*/
-
+<Adonijah Kiplimo>

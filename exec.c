@@ -1,43 +1,46 @@
-#include "MAIN.h"
+#include "shell.h"
 /**
- * exec - executes command that is given 
- * @command: command given
- * @args: arguments
- * Return: exit = 0
-*/
-
-
-
-
-int execo(char *command, char **args)
+ * execute -  variables
+ * @data: Program's data
+ * Return: success? returns zero, else return -1.
+ */
+int execute(data_of_program *data)
 {
-	int status;
-	pid_t pid;
-	int errcode = 0;
+	int retval = 0, status;
+	pid_t pidd;
 
-	pid = fork();
-	if (!pid)
+	retval = builtins_list(data);
+	if (retval != -1)
+		return (retval);
+	retval = find_program(data);
+	if (retval)
 	{
-		if (execve(command, args, environ) == -1)
+		return (retval);
+	}
+	else
+	{
+		pidd = fork();
+		if (pidd == -1)
 		{
-			freedom(1, command);
-			command = NULL;
-			errcode = errno;
-			error_msg(args);
-			exit(errcode);
+			perror(data->command_name);
+			exit(EXIT_FAILURE);
+		}
+		if (pidd == 0)
+		{
+			retval = execve(data->tokens[0], data->tokens, data->env);
+			if (retval == -1)
+				perror(data->command_name), exit(EXIT_FAILURE);
 		}
 		else
 		{
-			freedom(1, command);
-			command = NULL;
-			exit(errcode);
+			wait(&status);
+			if (WIFEXITED(status))
+				errno = WEXITSTATUS(status);
+			else if (WIFSIGNALED(status))
+				errno = 128 + WTERMSIG(status);
 		}
 	}
-	else
-		wait(&status);
-
-	freedom(1, command);
-	command = NULL;
-	errcode = 0;
-	return (errcode);
+	return (0);
 }
+
+<Adonijah Kiplimo Simple shell project>

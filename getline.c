@@ -1,33 +1,84 @@
-#include "main.h"
+#include "shell.h"
+
 /**
- * getline - executes commandss entered
- * @buffer: name of the program
- * @len: length
- * @args: Arg 1
- * @env_args: Environment args
- * Return: 0
+* _getline - gets line from prompt.
+* @data: this refferss to struct for the program data
+* Return: reading/seeing counting bytes.
 */
-void getline(char *buffer, int len, char **args, char **env_args)
+int _getline(data_of_program *data)
 {
-	if (len == EOF)
+	char buff[BUFFER_SIZE] = {'\0'};
+	static char *array_commands[10] = {NULL};
+	static char array_operators[10] = {'\0'};
+	ssize_t bytes_read, i = 0;
+
+	if (!array_commands[0] || (array_operators[0] == '&' && errno != 0) ||
+		(array_operators[0] == '|' && errno == 0))
 	{
-		printf("salida EOF\n");
-		write(STDOUT_FILENO, "\n", 1);
-		if (buffer != NULL)
+		for (i = 0; array_commands[i]; i++)
 		{
-			freedom(1, buffer);
-			buffer = NULL;
+			free(array_commands[i]);
+			array_commands[i] = NULL;
 		}
-		if (args != NULL)
-		{
-			freedom(2, args);
-			args = NULL;
-		}
-		if (env_args != NULL)
-		{
-			freedom(2, env_args);
-			env_args = NULL;
-		}
-		exit(0);
+
+		bytes_read = read(data->file_descriptor, &buff, BUFFER_SIZE - 1);
+		if (bytes_read == 0)
+			return (-1);
+		i = 0;
+		do {
+			array_commands[i] = str_duplicate(_strtok(i ? NULL : buff, "\n;"));
+			i = check_logic_ops(array_commands, i, array_operators);
+		} while (array_commands[i++]);
 	}
+	data->input_line = array_commands[0];
+	for (i = 0; array_commands[i]; i++)
+	{
+		array_commands[i] = array_commands[i + 1];
+		array_operators[i] = array_operators[i + 1];
+	}
+
+	return (str_length(data->input_line));
 }
+
+
+/**
+* check_logic_ops - checks for logic ops like &&
+* @array_commands:array commands
+* @i: index to be checked
+* @array_operators: array of the logical operatordss
+* Return: last command.
+*/
+int check_logic_ops(char *array_commands[], int i, char array_operators[])
+{
+	char *temp = NULL;
+	int j;
+
+	for (j = 0; array_commands[i] != NULL  && array_commands[i][j]; j++)
+	{
+		if (array_commands[i][j] == '&' && array_commands[i][j + 1] == '&')
+		{
+			temp = array_commands[i];
+			array_commands[i][j] = '\0';
+			array_commands[i] = str_duplicate(array_commands[i]);
+			array_commands[i + 1] = str_duplicate(temp + j + 2);
+			i++;
+			array_operators[i] = '&';
+			free(temp);
+			j = 0;
+		}
+		if (array_commands[i][j] == '|' && array_commands[i][j + 1] == '|')
+		{
+			temp = array_commands[i];
+			array_commands[i][j] = '\0';
+			array_commands[i] = str_duplicate(array_commands[i]);
+			array_commands[i + 1] = str_duplicate(temp + j + 2);
+			i++;
+			array_operators[i] = '|';
+			free(temp);
+			j = 0;
+		}
+	}
+	return (i);
+}
+/* Adonijah Kiplimo 
+ */

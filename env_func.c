@@ -17,7 +17,3 @@ int env_func(void)
 	return (0);
 }
 
-
-/**
- *Adonijah Kiplimo
- /

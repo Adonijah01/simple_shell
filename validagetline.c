@@ -32,6 +32,3 @@ void validagetline(char *buffer, int len, char **args, char **env_args)
 	}
 }
 
-/**
- * Adonijah Kiplimo
- * /

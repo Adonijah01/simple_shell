@@ -56,8 +56,3 @@ char *int_to_charac(int num)
 	return (str);
 }
 
-
-
-/**
- * Adonijah Kiplimo
- */

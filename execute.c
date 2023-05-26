@@ -39,7 +39,3 @@ int execo(char *command, char **args)
 	return (errcode);
 }
 
-
-/**
- * Adonijah Kiplimo
- */

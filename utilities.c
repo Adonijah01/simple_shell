@@ -107,7 +107,3 @@ char *strconk(char *dest, char *src)
 	return (dest);
 }
 
-
-/**
- * Adonijah Kiplimo
- */

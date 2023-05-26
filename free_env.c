@@ -14,8 +14,3 @@ void free_env(char **env_args, char **args)
 	}
 	freedom(2, args);
 }
-
-
-/**
- * Adonijah Kiplimo
- */

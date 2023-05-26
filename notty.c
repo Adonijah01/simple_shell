@@ -48,8 +48,3 @@ int notty(char **av __attribute__((unused)))
 	return (0);
 }
 
-
-
-/**
- * Adonijah kiplimo 
- */

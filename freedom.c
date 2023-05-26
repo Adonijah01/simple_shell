@@ -67,7 +67,3 @@ void free_all(char **dptr1, char **dptr2, char *sptr1, char *sptr2)
 
 }
 
-
-/**
- * Adonijah Kiplimo
- */

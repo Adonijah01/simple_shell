@@ -67,7 +67,3 @@ int notty(char **av __attribute__((unused)));
 #endif /*SIMPLESHELL*/
 
 
-
-/**
- * Adonijah Kiplimo
- */

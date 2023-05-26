@@ -61,7 +61,3 @@ char **parsing(char *buffer, int characters)
 	return (token_necklace);
 }
 
-
-/**
- * Adonijah Kiplimo
- */

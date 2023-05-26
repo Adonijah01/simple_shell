@@ -36,7 +36,3 @@ void error_badcommand(char **args, char *buffer)
 	args = NULL;
 }
 
-
-/**
- * Adonijah Kiplimo
- */

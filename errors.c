@@ -17,15 +17,15 @@ void error_msg(char **args)
 	error_message = strconk(error_message, looper);
 	error_message = strconk(error_message, ": ");
 	error_message = strconk(error_message, args[0]);
-i	perror(error_message);
+	perror(error_message);
 	free(error_message);
 }
 
 /**
- * error_badcommand - displays the error
- * @args: command given
- * @buffer: command given forr execution
- * Return: nothing
+ * error_badcommand - writes error depending on the error number
+ * @args: given command to execute
+ * @buffer: given command to execute
+ * Return: Nothing
 */
 void error_badcommand(char **args, char *buffer)
 {

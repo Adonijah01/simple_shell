@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
- * _compare - compares strings at a position given
- * @x: string to be cmpared
- * @y: strng to compre
+ * _compare - compares two strings at a given position
+ * @x: string to be compared
+ * @y: string to compare
  * Return: Nohing
 */
 int _compare(char *x, char *y)
@@ -21,10 +21,10 @@ int _compare(char *x, char *y)
 }
 
 /**
- * _strstr - compares strings at a given position.
- * @x: string to be compared.
- * @y: string to br compared.
- * Return: pointer 
+ * _strstr - compares two strings at a given position
+ * @x: string to be compared
+ * @y: string to compare
+ * Return: pointer to the first occurence
 */
 char *_strstr(char *x, char *y)
 {
@@ -40,10 +40,10 @@ char *_strstr(char *x, char *y)
 
 
 /**
- * _strcpy - anction that copiesstring pointed
- *@dest: character
- *@src:_ character
- * Return: destination
+ * _strcpy - unction that copies the string pointed to by src
+ *@dest: char
+ *@src:_ char
+ * Return: dest
  */
 char *_strcpy(char *dest, char *src)
 {
@@ -59,4 +59,3 @@ char *_strcpy(char *dest, char *src)
 	}
 	return (dest);
 }
-

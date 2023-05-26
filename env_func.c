@@ -1,7 +1,7 @@
 #include "main.h"
 /**
- * env_func - displays environment variables.
- * Return: 0 upon successs
+ * env_func - Prints eviroment variables
+ * Return: 0 on success
 */
 int env_func(void)
 {
@@ -16,4 +16,3 @@ int env_func(void)
 	}
 	return (0);
 }
-

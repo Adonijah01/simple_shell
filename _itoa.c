@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * lennum - number length
- * @n: integer
- * Return: lengh
+ * lennum - length of number
+ * @n: int
+ * Return: length
  */
 int lennum(int n)
 {
@@ -17,8 +17,8 @@ int lennum(int n)
 }
 
 /**
- * int_to_charac - converts charto striing.
- * @num: int that is going to be printed.
+ * int_to_charac - convert to string
+ * @num: integer to be printed
  * Return: string
  */
 
@@ -55,4 +55,3 @@ char *int_to_charac(int num)
 	str[i] = '\0';
 	return (str);
 }
-

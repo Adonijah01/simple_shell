@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * ret_path_line - checks  path variable
- * Return: position of pointers
+ * ret_path_line - Finds the PATH variable from enviroment
+ * Return: pointer position of the PATH variable
 */
 
 char *ret_path_line()
@@ -28,9 +28,9 @@ char *ret_path_line()
 }
 
 /**
- * change_equal_sig - chnge string that is given= two : Character
- * @str: string that was given
- * Return: nthing
+ * change_equal_sig - Change from a given strings = to : character
+ * @str: given string
+ * Return: Nohing
 */
 
 void change_equal_sig(char *str)
@@ -49,10 +49,10 @@ void change_equal_sig(char *str)
 }
 
 /**
- * _insert_path - inserts dir into command given
- * @args: command given
- * @path: envrmnt path
- * Return: path if exists/given command
+ * _insert_path - Inserts the directory into given command
+ * @args: given command
+ * @path: tokenized path enviroment
+ * Return: Full path command if exists or just a given command
 */
 
 char *_insert_path(char **args, char **path)
@@ -100,8 +100,8 @@ char *_insert_path(char **args, char **path)
 }
 
 /**
- * getenvpath - creats array of pointr
- * Return: pointer to  dir of arrays that are tokenized
+ * getenvpath - Creates an array of pointers to the PATH directories
+ * Return: Pointer to an array of tokenized directories
 */
 
 char **getenvpath()
@@ -111,7 +111,7 @@ char **getenvpath()
 	char **env_args;
 
 	tmp = ret_path_line();
-	change_equal_sig(tmp); /*change  PATH= for PATH:*/
+	change_equal_sig(tmp); /*Change  PATH= for PATH:*/
 	size_args = necklace_pearls(tmp);
 	env_args = parsing(tmp, size_args);
 	freedom(1, tmp);
@@ -120,9 +120,9 @@ char **getenvpath()
 }
 
 /**
- * spaces_buster - createarray of pointrs
- * @buffer: given strng
- * Return: Pointr of an array
+ * spaces_buster - Creates an array of pointers to the PATH directories
+ * @buffer: given string
+ * Return: Pointer to an array of tokenized directories
 */
 
 int spaces_buster(char *buffer)

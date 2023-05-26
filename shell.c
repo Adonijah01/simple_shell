@@ -1,10 +1,10 @@
 
 #include "main.h"
 /**
- * main - Entry point of Shell
- * @ac: Argument counter
- * @av: Argument values
- * Return: Exit if success = 0
+ * main - shell entry point
+ * @ac: counter of arg
+ * @av: value of arg
+ * Return: when success Exit = 0
 */
 
 int main(int ac __attribute__((unused)), char **av __attribute__((unused)))
@@ -28,3 +28,10 @@ int main(int ac __attribute__((unused)), char **av __attribute__((unused)))
 	}
 	return (0);
 }
+
+
+
+
+/**
+ * Adonijah Kiplimo
+ */

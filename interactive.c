@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * _interactive - Creates a loop that execute command lines entered by tty
- * @av: argument from main
- * Return: Exit / Error Code
+ * _interactive - creaates an interactive 
+ * @av: args 
+ * Return: exit/error
 */
 int _interactive(char **av __attribute__((unused)))
 {
@@ -46,3 +46,9 @@ int _interactive(char **av __attribute__((unused)))
 	}
 	return (0);
 }
+
+
+
+/**
+ * Adonijah Kiplimo
+ */

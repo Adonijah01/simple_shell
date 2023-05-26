@@ -15,9 +15,9 @@
 
 extern char **environ;
 /**
-* struct builtin - builtins
-* @b_name: name of the command
-* @b_func: pointer to a function
+* struct builtin - bultins available
+* @b_name: command's name
+* @b_func: pointr to functions
 */
 typedef struct builtin
 {
@@ -66,3 +66,8 @@ void validagetline(char *buffer, int len, char **args, char **env_args);
 int notty(char **av __attribute__((unused)));
 #endif /*SIMPLESHELL*/
 
+
+
+/**
+ * Adonijah Kiplimo
+ */

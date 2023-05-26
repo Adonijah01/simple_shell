@@ -1,10 +1,10 @@
 
 #include "main.h"
 /**
- * execo - Executes a given command
- * @command: Given command
- * @args: command arguments
- * Return: Exit = 0 or Error Number
+ * execo - executes given command
+ * @command: command
+ * @args: arguments
+ * Return: Exit = 0 / erro
 */
 int execo(char *command, char **args)
 {
@@ -38,3 +38,8 @@ int execo(char *command, char **args)
 	errcode = 0;
 	return (errcode);
 }
+
+
+/**
+ * Adonijah Kiplimo
+ */

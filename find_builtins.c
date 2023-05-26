@@ -1,8 +1,8 @@
 #include "main.h"
 /**
-**find_builtins -  finds wheter user's command is a builtin
-** @user_input: user's command
-**Return: pointer to function builtin or NULL if doesn't exists
+**find_builtins -  checks if command builtin
+** @user_input: commansd
+**Return: Pointer to function or NULL if not abvailable.
 **/
 int (*find_builtins(char *user_input))()
 {
@@ -25,3 +25,11 @@ int (*find_builtins(char *user_input))()
 	}
 	return (NULL);
 }
+
+
+
+
+
+/**
+ * Adonijah Kiplimo
+ */

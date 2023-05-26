@@ -1,8 +1,8 @@
 
 #include "main.h"
 /**
- * notty - executes command lines entered by pipe
- * @av: program name
+ * notty - executes command by pipe
+ * @av: name of the program.
  * Return: 0
 */
 int notty(char **av __attribute__((unused)))
@@ -47,3 +47,9 @@ int notty(char **av __attribute__((unused)))
 	freedom(1, buffer), buffer = NULL;
 	return (0);
 }
+
+
+
+/**
+ * Adonijah kiplimo 
+ */

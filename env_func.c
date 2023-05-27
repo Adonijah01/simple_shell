@@ -1,3 +1,7 @@
+/**
+ * Adonijah Kiplimo
+ */
+
 #include "main.h"
 /**
  * env_func - Prints eviroment variables
@@ -16,3 +20,7 @@ int env_func(void)
 	}
 	return (0);
 }
+
+/**
+ * Adonijah Kiplimo
+ */

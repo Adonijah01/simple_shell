@@ -1,7 +1,11 @@
+/**
+ * Adonijah Kiplimo
+ */
+
 #include "main.h"
 /**
  * main - Entry point of Shell
- * @ac: Argument counter
+ * @ac: Arguments counter
  * @av: Argument values
  * Return: Exit if success = 0
 */

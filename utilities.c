@@ -1,3 +1,7 @@
+/**
+ * Adonijah Kiplimo
+ */
+
 #include "main.h"
 
 /**
@@ -106,3 +110,8 @@ char *strconk(char *dest, char *src)
 
 	return (dest);
 }
+
+
+/**
+ * Adonijah Kiplimo
+ */

@@ -1,3 +1,7 @@
+/**
+ * Adonijah Kiplimo
+ */
+
 #include "main.h"
 /**
  * error_msg - writes error depending on the error number
@@ -35,3 +39,7 @@ void error_badcommand(char **args, char *buffer)
 	freedom(2, args);
 	args = NULL;
 }
+
+/**
+ * Adonijah Kiplimo
+ */

@@ -1,3 +1,9 @@
+
+/**
+ * Adonijah Kiplimo
+ */
+
+
 #include "main.h"
 /**
 * freedom - free the memory
@@ -65,3 +71,7 @@ void free_all(char **dptr1, char **dptr2, char *sptr1, char *sptr2)
 		sptr2 = NULL;
 	}
 }
+
+/**
+ * Adonijah Kiplimo
+ */

@@ -1,3 +1,7 @@
+/**
+ * Adonijah Kiplimo
+ */
+
 #include "main.h"
 /**
 * free_env - frees tokenized PATH directories and user's arguments
@@ -14,3 +18,8 @@ void free_env(char **env_args, char **args)
 	}
 	freedom(2, args);
 }
+
+
+/**
+ * Adonijah Kiplimo
+ */

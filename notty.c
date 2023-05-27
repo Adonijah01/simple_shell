@@ -1,3 +1,8 @@
+/**
+ * Adonijah Kiplimo
+ */
+
+
 #include "main.h"
 /**
  * notty - executes command lines entered by pipe
@@ -46,3 +51,7 @@ int notty(char **av __attribute__((unused)))
 	freedom(1, buffer), buffer = NULL;
 	return (0);
 }
+
+/**
+ * Adonijah Kiplimo\
+ */

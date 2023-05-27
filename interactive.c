@@ -1,3 +1,8 @@
+/**
+ * Adonijah Kiplimo
+ */
+
+
 #include "main.h"
 /**
  * _interactive - Creates a loop that execute command lines entered by tty
@@ -46,3 +51,9 @@ int _interactive(char **av __attribute__((unused)))
 	}
 	return (0);
 }
+
+
+/**
+ * Adonijah Kiplimo
+ */
+

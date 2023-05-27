@@ -1,3 +1,7 @@
+/**
+ * Adonijah Kiplimo
+ */
+
 #include "main.h"
 /**
  * exit_func - Builtin function that exits from shell

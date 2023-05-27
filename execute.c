@@ -1,3 +1,7 @@
+/**
+ * Adonijah Kiplimo
+ */
+
 #include "main.h"
 /**
  * execo - Executes a given command
@@ -37,3 +41,7 @@ int execo(char *command, char **args)
 	errcode = 0;
 	return (errcode);
 }
+
+/**
+ * Adonijah Kiplimo
+ */

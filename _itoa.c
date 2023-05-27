@@ -1,3 +1,7 @@
+/**
+ * Adonijah Kiplimo
+ */
+
 #include "main.h"
 /**
  * lennum - length of number
@@ -17,8 +21,8 @@ int lennum(int n)
 }
 
 /**
- * int_to_charac - convert to string
- * @num: integer to be printed
+ * int_to_charac - converts to string
+ * @num: integers to be printed
  * Return: string
  */
 
@@ -55,3 +59,7 @@ char *int_to_charac(int num)
 	str[i] = '\0';
 	return (str);
 }
+
+/**
+ * Adonijah Kiplimo
+ */

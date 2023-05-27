@@ -1,3 +1,8 @@
+/**
+ * Adonijah Kiplimo
+ */
+
+
 #include "main.h"
 /**
  * validagetline - executes command lines entered by pipe
@@ -31,3 +36,8 @@ void validagetline(char *buffer, int len, char **args, char **env_args)
 		exit(0);
 	}
 }
+
+
+/**
+ * Adonijah Kiplimo
+ */

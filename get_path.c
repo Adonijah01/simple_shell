@@ -1,3 +1,9 @@
+/**
+ * Adonijah Kiplimo
+ */
+
+
+
 #include "main.h"
 
 /**
@@ -139,3 +145,8 @@ int spaces_buster(char *buffer)
 	}
 	return (1);
 }
+
+
+/**
+ * ADonijah Kiplimo
+ */

@@ -1,3 +1,7 @@
+/**
+ * Adonijah Kiplimo
+ */
+
 #include "main.h"
 /**
  * necklace_pearls - counts commands and options entered by user
@@ -59,3 +63,7 @@ char **parsing(char *buffer, int characters)
 	token_necklace[counter] = NULL;
 	return (token_necklace);
 }
+
+/**
+ * Adonijah Kiplimo
+ */

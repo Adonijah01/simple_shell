@@ -1,3 +1,7 @@
+/**
+ * Adonijah Kiplimo
+ */
+
 #include "main.h"
 /**
  * args_constructor - executes command lines entered by pipe
@@ -19,3 +23,7 @@ char **args_constructor(char *buffer)
 
 	return (user_command);
 }
+
+/**
+ * Adonijah Kiplimo
+ */

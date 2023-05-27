@@ -1,85 +1,37 @@
-#include "shell.h"
-
+#include "main.h"
 /**
- *_eputs - prints an input string
- * @str: the string to be printed
- *
+ * error_msg - writes error depending on the error number
+ * @args: given command to execute
  * Return: Nothing
- */
-void _eputs(char *str)
+*/
+void error_msg(char **args)
 {
-	int i = 0;
+	int loop = 1;
+	char *hsh_home = "";
+	char *error_message = malloc(sizeof(char) * 255);
+	char *looper = NULL;
 
-	if (!str)
-		return;
-	while (str[i] != '\0')
-	{
-		_eputchar(str[i]);
-		i++;
-	}
+	looper = int_to_charac(loop);
+	error_message = strduplicate(hsh_home);
+	error_message = strconk(error_message, ": ");
+	error_message = strconk(error_message, looper);
+	error_message = strconk(error_message, ": ");
+	error_message = strconk(error_message, args[0]);
+	perror(error_message);
+	free(error_message);
 }
 
 /**
- * _eputchar - writes the character c to stderr
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-int _eputchar(char c)
+ * error_badcommand - writes error depending on the error number
+ * @args: given command to execute
+ * @buffer: given command to execute
+ * Return: Nothing
+*/
+void error_badcommand(char **args, char *buffer)
 {
-	static int i;
-	static char buf[WRITE_BUF_SIZE];
-
-	if (c == BUF_FLUSH || i >= WRITE_BUF_SIZE)
-	{
-		write(2, buf, i);
-		i = 0;
-	}
-	if (c != BUF_FLUSH)
-		buf[i++] = c;
-	return (1);
-}
-
-/**
- * _putfd - writes the character c to given fd
- * @c: The character to print
- * @fd: The filedescriptor to write to
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-int _putfd(char c, int fd)
-{
-	static int i;
-	static char buf[WRITE_BUF_SIZE];
-
-	if (c == BUF_FLUSH || i >= WRITE_BUF_SIZE)
-	{
-		write(fd, buf, i);
-		i = 0;
-	}
-	if (c != BUF_FLUSH)
-		buf[i++] = c;
-	return (1);
-}
-
-/**
- *_putsfd - prints an input string
- * @str: the string to be printed
- * @fd: the filedescriptor to write to
- *
- * Return: the number of chars put
- */
-int _putsfd(char *str, int fd)
-{
-	int i = 0;
-
-	if (!str)
-		return (0);
-	while (*str)
-	{
-		i += _putfd(*str++, fd);
-	}
-	return (i);
+	write(STDOUT_FILENO, "command not found\n", 18);
+	freedom(1, buffer);
+	buffer = NULL;
+	freedom(2, args);
+	args = NULL;
 }

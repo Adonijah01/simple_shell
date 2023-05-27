@@ -1,57 +1,80 @@
-#include "main.h"
 /**
- * lennum - length number
- * @n: int
- * Return: length
+ * Adonijah Kiplimo
  */
-int lennum(int n)
-{
-	int len = 0;
 
-	while (n / 10 != 0)
-	{
-		len++;
-		n /= 10;
-	}
-	return (len);
+
+
+#include "shell.h"
+
+/**
+ * interactive - returns true if shell is interactive mode
+ * @info: struct address
+ *
+ * Return: 1 if interactive mode, 0 otherwise
+ */
+int interactive(info_t *info)
+{
+	return (isatty(STDIN_FILENO) && info->readfd <= 2);
 }
 
 /**
- * int_to_charac - convert  string
- * @num: integer  printed
- * Return: string
+ * is_delim - checks if character is a delimeter
+ * @c: the char to check
+ * @delim: the delimeter string
+ * Return: 1 if true, 0 if false
+ */
+int is_delim(char c, char *delim)
+{
+	while (*delim)
+		if (*delim++ == c)
+			return (1);
+	return (0);
+}
+
+/**
+ *_isalpha - checks for alphabetic character
+ *@c: The character to input
+ *Return: 1 if c is alphabetic, 0 otherwise
  */
 
-char *int_to_charac(int num)
+int _isalpha(int c)
 {
-	int digit = 0;
-	int i = 0;
-	char *str;
-	int divisor = 1000000000;
-	int len = lennum(num);
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+		return (1);
+	else
+		return (0);
+}
 
-	str = malloc(len * sizeof(char) + 1);
-	if (!str)
-		return (NULL);
+/**
+ *_atoi - converts a string to an integer
+ *@s: the string to be converted
+ *Return: 0 if no numbers in string, converted number otherwise
+ */
 
-	if (num < 10)
+int _atoi(char *s)
+{
+	int i, sign = 1, flag = 0, output;
+	unsigned int result = 0;
+
+	for (i = 0;  s[i] != '\0' && flag != 2; i++)
 	{
-		str[i++] = num + '0';
-		str[i] = '\0';
-		return (str);
-	}
+		if (s[i] == '-')
+			sign *= -1;
 
-	while (divisor)
-	{
-		digit = (num / divisor) % 10;
-		if (digit != 0 || (len >= 0 && str[i - 1] >= '0'))
+		if (s[i] >= '0' && s[i] <= '9')
 		{
-			str[i] = digit + '0';
-			i++;
-			len--;
+			flag = 1;
+			result *= 10;
+			result += (s[i] - '0');
 		}
-		divisor /= 10;
+		else if (flag == 1)
+			flag = 2;
 	}
-	str[i] = '\0';
-	return (str);
+
+	if (sign == -1)
+		output = -result;
+	else
+		output = result;
+
+	return (output);
 }

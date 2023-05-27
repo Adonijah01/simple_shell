@@ -1,38 +1,85 @@
-#include "main.h"
-/**
- * error_msg - WRITES ERROR depending on THE ERROR NUMBER
- * @args: Given COMMAND TO EXECUTE
- * Return: nothing
-*/
-void error_msg(char **args)
-{
-	int loop = 1;
-	char *hsh_home = "";
-	char *error_message = malloc(sizeof(char) * 255);
-	char *looper = NULL;
+#include "shell.h"
 
-	looper = int_to_charac(loop);
-	error_message = strduplicate(hsh_home);
-	error_message = strconk(error_message, ": ");
-	error_message = strconk(error_message, looper);
-	error_message = strconk(error_message, ": ");
-	error_message = strconk(error_message, args[0]);
-	perror(error_message);
-	free(error_message);
+/**
+ *_eputs - prints an input string
+ * @str: the string to be printed
+ *
+ * Return: Nothing
+ */
+void _eputs(char *str)
+{
+	int i = 0;
+
+	if (!str)
+		return;
+	while (str[i] != '\0')
+	{
+		_eputchar(str[i]);
+		i++;
+	}
 }
 
 /**
- * error_badcommand - Writes error depending on the ERROR NUMBER
- * @args: Given COMMAND TO EXECUTE
- * @buffer: Given COMMAND TO EXECUTE
- * Return: nothing
-*/
-void error_badcommand(char **args, char *buffer)
+ * _eputchar - writes the character c to stderr
+ * @c: The character to print
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
+int _eputchar(char c)
 {
-	write(STDOUT_FILENO, "command not found\n", 18);
-	freedom(1, buffer);
-	buffer = NULL;
-	freedom(2, args);
-	args = NULL;
+	static int i;
+	static char buf[WRITE_BUF_SIZE];
+
+	if (c == BUF_FLUSH || i >= WRITE_BUF_SIZE)
+	{
+		write(2, buf, i);
+		i = 0;
+	}
+	if (c != BUF_FLUSH)
+		buf[i++] = c;
+	return (1);
 }
 
+/**
+ * _putfd - writes the character c to given fd
+ * @c: The character to print
+ * @fd: The filedescriptor to write to
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
+int _putfd(char c, int fd)
+{
+	static int i;
+	static char buf[WRITE_BUF_SIZE];
+
+	if (c == BUF_FLUSH || i >= WRITE_BUF_SIZE)
+	{
+		write(fd, buf, i);
+		i = 0;
+	}
+	if (c != BUF_FLUSH)
+		buf[i++] = c;
+	return (1);
+}
+
+/**
+ *_putsfd - prints an input string
+ * @str: the string to be printed
+ * @fd: the filedescriptor to write to
+ *
+ * Return: the number of chars put
+ */
+int _putsfd(char *str, int fd)
+{
+	int i = 0;
+
+	if (!str)
+		return (0);
+	while (*str)
+	{
+		i += _putfd(*str++, fd);
+	}
+	return (i);
+}
